@@ -18,10 +18,11 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    emailjs.send('Balaji', 'YOUR_TEMPLATE_ID', formData, 'YOUR_USER_ID')
+    emailjs.send('service_1adi29j', 'template_9m33n8g', formData, '6c2qTKmRPIN8KB2O6')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Message sent successfully!');
+        console.log(response,"oi")
       })
       .catch((err) => {
         console.error('FAILED...', err);
