@@ -1,18 +1,26 @@
 import React from 'react';
-import QRCodeGenerator from '../src/components/qrcode.jsx';
-import Navbar from "./components/navbar.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar.jsx';
 import Footer from './components/footer.jsx';
-import './App.css';
+import QRCodeGenerator from './components/qrcode.jsx';
+import Service from './components/service.jsx';
+import Contact from './components/contact.jsx';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100">
-      <Navbar />
-      <div className="flex-grow flex flex-col justify-center items-center pt-20">
-        <QRCodeGenerator />
+    <Router>
+      <div className="min-h-screen flex flex-col bg-gray-100">
+        <Navbar />
+        <div className="flex-grow flex flex-col justify-center items-center pt-20">
+          <Routes>
+            <Route path="/" element={<QRCodeGenerator />} />
+            <Route path="/services" element={<Service />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 
