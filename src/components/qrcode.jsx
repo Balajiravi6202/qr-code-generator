@@ -32,7 +32,7 @@ function QRCodeGenerator() {
       </button>
       {qrValue && (
         <div className="mt-8">
-          <QRCode value={qrValue} size={256} />
+          <QRCode value={qrValue} size={150} />
         </div>
       )}
     </div>
