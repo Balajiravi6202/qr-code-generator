@@ -18,14 +18,18 @@ function Navbar() {
             </span>
           </Link>
           <div className="flex md:order-2 space-x-3 rtl:space-x-reverse">
-            <button
-              type="button"
-              onClick={() => window.location.reload()} 
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-light rounded-lg text-sm px-2 py-1 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            <Link
+              to="/login"
+              className="text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 font-light rounded-lg text-sm px-4 py-2"
             >
-              Get started
-            </button>
-
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-light rounded-lg text-sm px-4 py-2 dark:bg-green-500 dark:hover:bg-green-600 dark:focus:ring-green-800"
+            >
+              Sign Up
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -67,7 +71,6 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-             
               <li>
                 <Link
                   to="/services"
@@ -84,6 +87,8 @@ function Navbar() {
                   Contact
                 </Link>
               </li>
+              {/* Add Login and Sign Up links to the dropdown menu */}
+              
             </ul>
           </div>
         </div>

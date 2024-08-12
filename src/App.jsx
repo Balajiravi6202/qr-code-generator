@@ -5,7 +5,8 @@ import Footer from './components/footer.jsx';
 import QRCodeGenerator from './components/qrcode.jsx';
 import Service from './components/service.jsx';
 import Contact from './components/contact.jsx';
-
+import Login from './components/login.jsx';
+import SignUp from './components/signup.jsx';
 function App() {
   return (
     <Router>
@@ -16,6 +17,9 @@ function App() {
             <Route path="/" element={<QRCodeGenerator />} />
             <Route path="/services" element={<Service />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            
           </Routes>
         </div>
         <Footer />
