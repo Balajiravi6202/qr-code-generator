@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , Navigate} from 'react-router-dom';
 import { FaGoogle, FaWhatsapp } from 'react-icons/fa';
+import { auth } from '../service/firebase.jsx'; // Correctly import the auth reference
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 function SignUpPage() {
   const [email, setEmail] = useState('');
@@ -9,11 +11,22 @@ function SignUpPage() {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+    
     // Handle sign-up logic here
   };
 
-  const handleGoogleSignUp = () => {
-    // Handle Google sign-up logic here
+  const handleGoogleSignUp = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      Navigate('/'); 
+      console.log('User Info:', user);
+      // Handle post-sign-in actions here (e.g., redirect or show user info)
+    } catch (error) {
+      console.error('Error during Google sign-in:', error);
+    }
   };
 
   return (
