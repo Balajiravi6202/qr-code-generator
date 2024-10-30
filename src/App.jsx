@@ -16,7 +16,7 @@ function App() {
         <div className="flex-grow flex flex-col justify-center items-center pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/qrcode" element={<QRCodeGenerator />} />
+            <Route path="/services" element={<QRCodeGenerator />} />
             <Route path="/services" element={<Service />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
