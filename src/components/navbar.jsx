@@ -9,7 +9,7 @@ function Navbar() {
       <div className="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/image/qrlogo.png" className="h-10" alt="QR Code" />
-          <span className="text-xl font-semibold dark:text-white">QR Code Generator</span>
+          <span className="text-xl font-semibold dark:text-white">WEB TECH</span>
         </Link>
 
         <div className="flex md:hidden">
